@@ -11,8 +11,32 @@
   <body>
     <h2>Infinite Scroll</h2>
     <main>
-      <ol id="infi-list"></ol>
+      <ol id="infi-list">
+		  <li>Item 1</li>
+		  <li>Item 2</li>
+		  <li>Item 3</li>
+		  <li>Item 4</li>
+		  <li>Item 5</li>
+		  <li>Item 6</li>
+		  <li>Item 7</li>
+		  <li>Item 8</li>
+		  <li>Item 9</li>
+		  <li>Item 10</li>
+	  </ol>
     </main>
-    <script src="./script.js"></script>
+    <script >
+     let ol = document.getElementById('infi-list');
+let n = 10;
+
+function addLiOnScrolling(){
+	alert("heuuu");
+	let li = document.createElement('li');
+	li.textContent = 'Item '+ (n+1);
+	ol.appendChild(li);
+}
+
+window.addEventListener('scroll' , addLiOnScrolling);
+
+   </script>
   </body>
 </html>
